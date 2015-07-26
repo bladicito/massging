@@ -1,0 +1,12 @@
+account/
+.idea/
+admin/
+framework/
+include/
+languages/
+form/
+modules/
+search/
+temp/
+
+
