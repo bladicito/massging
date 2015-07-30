@@ -25,4 +25,36 @@
         padding-bottom: 15px;
 
     }
+
+    .slider-dots--holder {
+        .slick-dots {
+            padding-top: 30px;
+            list-style: none;
+            li {
+                float: left;
+                .radius(50%);
+                width: 30px;
+                height:30px;
+                background-color: #FFE573;
+                margin-right: 15px;
+                button {
+                    border: none;
+                    background: transparent;
+                    color: #ffffff;
+                    position: relative;
+                    top: 4px;
+                    left:5px;
+                }
+            }
+            li.slick-active {
+                background-color: @color-plum2;
+                button {
+                    border: none;
+                    background: transparent;
+                    color: #ffffff;
+                }
+
+            }
+        }
+    }
 }

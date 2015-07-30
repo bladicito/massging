@@ -36,7 +36,7 @@
   margin: 0;
   padding: 0;
   background-color: #404040;
-  top: 64px;
+  z-index: 1000;
 }
 .mod-menu .main-nav li ul li a {
   color: #ffffff;

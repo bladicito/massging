@@ -9,7 +9,7 @@
         <title><?php page_title(); ?></title>
         <meta name="keywords" content="<?php page_keywords(); ?>" />
         <link rel="stylesheet" href="<?php echo TEMPLATE_DIR;?>/css/styles.css">
-        <script type="text/javascript" src="http://fast.fonts.net/jsapi/cd802a3f-e2cf-4b1c-8451-b5cfe02baafd.js"></script>
+        <link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/cd802a3f-e2cf-4b1c-8451-b5cfe02baafd.css"/>
         <?php
             if(function_exists('register_frontend_modfiles')) {
                 register_frontend_modfiles('css');
@@ -37,10 +37,13 @@
         <div class="full-width-white">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-9">
                         <div class="mod mod-menu">
                             <?php include('modules-terrific/menu/menu.php');?>
                         </div>
+                    </div>
+                    <div class="col-md-3 slider-dots--holder pull-right">
+
                     </div>
                 </div>
             </div>
@@ -56,7 +59,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="mod mod-sliderhuge">
+                        <div class="mod mod-textcontent">
                             <?php echo page_content(4);?>
                         </div>
                     </div>

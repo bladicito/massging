@@ -1,0 +1,144 @@
+.global-massaging .full-width-gray {
+  border-bottom: 1px solid #cacaca;
+  background-color: #f2f2f2;
+}
+.global-massaging .full-width-gray > .container .container {
+  width: 100%;
+}
+.global-massaging .full-width-white {
+  border-bottom: 1px solid #cacaca;
+  background-color: #ffffff;
+}
+.global-massaging .full-width-white > .container .container {
+  width: 100%;
+}
+.global-massaging .header {
+  margin-top: 30px;
+  padding-bottom: 15px;
+}
+.global-massaging .slider-dots--holder .slick-dots {
+  padding-top: 30px;
+  list-style: none;
+}
+.global-massaging .slider-dots--holder .slick-dots li {
+  float: left;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -ms-border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: #FFE573;
+  margin-right: 15px;
+}
+.global-massaging .slider-dots--holder .slick-dots li button {
+  border: none;
+  background: transparent;
+  color: #ffffff;
+  position: relative;
+  top: 4px;
+  left: 5px;
+}
+.global-massaging .slider-dots--holder .slick-dots li.slick-active {
+  background-color: #906494;
+}
+.global-massaging .slider-dots--holder .slick-dots li.slick-active button {
+  border: none;
+  background: transparent;
+  color: #ffffff;
+}
+.global-massaging h1 {
+  font-family: 'Aeonis LT W01 Medium Extd';
+  font-size: 20px;
+}
+.global-massaging h2 {
+  font-family: 'HelveticaNeueW01-UltLt';
+  font-size: 30px;
+  color: #906494;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+.global-massaging .main-nav {
+  font-family: 'Aeonis LT W01 Thin Extd';
+}
+.global-massaging p {
+  font-family: 'HelveticaNeueW01-45Ligh';
+  letter-spacing: 1.5px;
+  line-height: 25px;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+.mod-logo img {
+  width: 100px;
+  height: auto;
+}
+.mod-menu .container {
+  padding: 15px 0;
+}
+.mod-menu .main-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.mod-menu .main-nav:before,
+.mod-menu .main-nav:after {
+  content: " ";
+  display: table;
+}
+.mod-menu .main-nav:after {
+  clear: both;
+}
+.mod-menu .main-nav li {
+  float: left;
+  position: relative;
+}
+.mod-menu .main-nav li a {
+  padding: 10px 20px;
+  font-size: 20px;
+  display: block;
+  text-decoration: none;
+  color: #000000;
+  font-weight: 100;
+}
+.mod-menu .main-nav li a:hover {
+  color: #001100;
+}
+.mod-menu .main-nav li ul {
+  position: absolute;
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #404040;
+  z-index: 1000;
+}
+.mod-menu .main-nav li ul li a {
+  color: #ffffff;
+  display: block;
+}
+.mod-menu .main-nav li.menu-current a {
+  color: #000000;
+  font-weight: 300;
+}
+.mod-menu .main-nav li:hover ul {
+  display: block;
+}
+.mod-menu .main-nav li:hover ul li a {
+  color: #ffffff;
+}
+.mod-sliderhuge .container {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.mod-sliderhuge img {
+  width: 100%;
+  height: auto;
+}
+.mod-slogan {
+  padding-top: 50px;
+}
+.mod-slogan h1 {
+  text-align: right;
+  text-transform: uppercase;
+}

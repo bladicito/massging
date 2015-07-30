@@ -16,3 +16,14 @@
   margin-top: 30px;
   padding-bottom: 15px;
 }
+.global-massaging .slider-dots--holder .slick-dots {
+  padding-top: 30px;
+  list-style: none;
+}
+.global-massaging .slider-dots--holder .slick-dots li {
+  float: left;
+}
+.global-massaging .slider-dots--holder .slick-dots li.slick-active button {
+  background-color: #2b542c;
+  color: #ffffff;
+}
