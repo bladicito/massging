@@ -1,7 +1,3 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: bladimirardiles
- * Date: 28/07/15
- * Time: 22:33
- */
+<div class="container">
+    <?php echo page_content(1);?>
+</div>

@@ -1,0 +1,74 @@
+.mod-menu {
+    .container {
+        padding: 15px 0;
+    }
+    .main-nav {
+        &:before,
+        &:after {
+            content: " "; // 1
+            display: table; // 2
+        }
+        &:after {
+            clear: both;
+        }
+
+
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+            float: left;
+            position: relative;
+            a {
+                padding: 10px 20px;
+                font-size: 20px;
+                display: block;
+                text-decoration: none;
+                color: #000000;
+                font-weight: 100;
+
+            }
+
+            a:hover {
+                color: #001100;
+            }
+
+            ul {
+                position: absolute;
+                display:none;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                background-color: #404040;
+                top: 64px;
+                li {
+
+                    a {
+                        color: #ffffff;
+                        display: block;
+                    }
+                }
+
+            }
+        }
+        li.menu-current {
+            a {
+                color: #000000;
+                font-weight: 300;
+
+            }
+
+        }
+        li:hover {
+            ul {
+                display: block;
+                li {
+                    a {
+                        color:#ffffff;
+                    }
+                }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,18 @@
+.global-massaging .full-width-gray {
+  border-bottom: 1px solid #cacaca;
+  background-color: #f2f2f2;
+}
+.global-massaging .full-width-gray > .container .container {
+  width: 100%;
+}
+.global-massaging .full-width-white {
+  border-bottom: 1px solid #cacaca;
+  background-color: #ffffff;
+}
+.global-massaging .full-width-white > .container .container {
+  width: 100%;
+}
+.global-massaging .header {
+  margin-top: 30px;
+  padding-bottom: 15px;
+}
