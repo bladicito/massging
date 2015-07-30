@@ -17,6 +17,7 @@ var gulp            = require('gulp'),
 	jsFiles			= [
 		'templates/massaging/assets/js/jquery.js',
 		'templates/massaging/assets/js/terrific.js',
+		'templates/massaging/assets/js/slick.js',
 		'templates/massaging/modules-terrific/**/js/*.js'
 	],
 
@@ -37,8 +38,25 @@ gulp.task('concatenateJsFiles', function() {
 		.pipe(gulp.dest('templates/massaging/js'));
 });
 
-gulp.task('lessToCss', function() {
-	return gulp.src(lessFiles)
+gulp.task('uglifyJsFiles', ['concatenateJsFiles'], function() {
+	return gulp.src('templates/massaging/js/scripts.js')
+		.pipe(uglify())
+		.pipe(rename('templates/massaging/js/scripts.min.js'))
+		.pipe(rename({dirname : ''}))
+		.pipe(gulp.dest('templates/massaging/js'));
+});
+
+
+
+gulp.task('concatenateLessFiles', function() {
+    return gulp.src(lessFiles)
+        .pipe(concat('styles.less'))
+        .pipe(gulp.dest('templates/massaging/cache'))
+});
+
+
+gulp.task('lessToCss', ['concatenateLessFiles'], function() {
+	return gulp.src('templates/massaging/cache/*.less')
 		.pipe(less())
 		.pipe(rename({dirname : ''}))
 		.pipe(gulp.dest('templates/massaging/cache'))
@@ -53,11 +71,12 @@ gulp.task('concatenateCss', ['lessToCss'], function() {
 gulp.task('watch', function () {
 	gulp.watch('templates/massaging/assets/css/*.*', ['concatenateCss']);
 	gulp.watch('templates/massaging/modules-terrific/**/css/*.less', ['concatenateCss']);
+    gulp.watch('templates/massaging/modules-terrific/**/js/*.js', ['uglifyJsFiles']);
 });
 
 
 
-gulp.task('default', [ 'concatenateCss', 'watch']);
+gulp.task('default', [ 'uglifyJsFiles', 'concatenateCss', 'watch']);
 
 
 
