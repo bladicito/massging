@@ -1,8 +1,30 @@
 .mod-logo {
+    .container {
+        margin-top: 35px;
+    }
 
     img {
         width: 100px;
         height: auto;
     }
 
+    h3 {
+        display: inline-block;
+        color: @color-christi;
+        margin-top: 20px;
+        left: 20px;
+        position: relative;
+        top: 43px;
+        font-weight: 600;
+    }
+
+}
+
+@media screen and (max-width: @breakpoint-mobile) {
+
+    .mod-logo {
+        .container {
+           text-align: center;
+        }
+    }
 }

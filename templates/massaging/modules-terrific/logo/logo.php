@@ -1,3 +1,4 @@
 <div class="container">
-    <?php echo page_content(1);?>
+    <img alt="" src="/media/logo.png" />
+    <h3>By Emi</h3>
 </div>

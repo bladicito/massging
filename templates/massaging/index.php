@@ -42,7 +42,7 @@
                             <?php include('modules-terrific/menu/menu.php');?>
                         </div>
                     </div>
-                    <div class="col-md-3 slider-dots--holder pull-right">
+                    <div class="col-md-3 slider-dots--holder pull-right hidden-xs">
 
                     </div>
                 </div>
@@ -60,7 +60,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="mod mod-textcontent">
-                            <?php echo page_content(4);?>
+                            <?php echo page_content(2);?>
                         </div>
                     </div>
                 </div>
@@ -69,15 +69,19 @@
 
 
 
-
-        <div class="container">
-            <div class="row">
-                <div class="mod mod-footer">
-                    Copyright © <?php page_footer(); ?>-<?php echo date("Y");?>
+        <div class="full-width-green">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="mod mod-footer">
+                            <?php include('modules-terrific/footer/footer.php');?>
+                        </div>
+                    </div>
                 </div>
             </div>
-
         </div>
+
+
 
         <script type="text/javascript" src="<?php echo TEMPLATE_DIR;?>/js/scripts.js"></script>
         <script type="text/javascript">
