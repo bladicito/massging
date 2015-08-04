@@ -1,0 +1,54 @@
+.mod-teaser {
+
+    .teaser__content:hover {
+        background-color: @color-light-yellow-header;
+    }
+
+    .teaser__content {
+        .radius(8px;);
+        border: 1px solid @color-dividers;
+        overflow: hidden;
+    }
+    .teaser__content--text {
+        padding: 15px;
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+
+    img {
+        width: 100%;
+
+    }
+    .teaser__content--link {
+        padding: 15px;
+        text-align: right;
+        a {
+            color: @color-christi;
+        }
+        i {
+            color:@color-christi;
+            font-size: 2.5em;
+        }
+        span {
+            margin-left: 20px;
+            font-weight: 400;
+            font-family:'Aeonis LT W01 Thin Extd';
+        }
+    }
+}
+
+@media screen and (max-width: @breakpoint-mobile) {
+    .mod-teaser {
+        .container {
+            margin-bottom: 24px;
+        }
+
+    }
+}
+
+
+.teasers {
+    padding: 24px 0;
+}

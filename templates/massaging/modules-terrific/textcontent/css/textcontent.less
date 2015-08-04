@@ -1,0 +1,117 @@
+.mod-textcontent {
+    .mobile-title {
+        display:none;
+    }
+
+    .desktop-title {
+        display: block;
+    }
+    table {
+        & {
+            margin: 24px 0;
+            thead {
+                font-family:'Aeonis LT W01 Bold Extended';
+                border-bottom: 1px solid @color-dividers;
+                margin-bottom: 20px;
+                th {
+                    padding-bottom: 10px;
+                }
+                th:last-child {
+                    text-align: right;
+                }
+
+                th:nth-child(3), th:nth-child(2) {
+                    text-align: center;
+                }
+
+                th:first-child {
+                    width:40%;
+                }
+
+
+
+
+            }
+            tbody {
+                tr:nth-child(even) {
+                    background-color: @color-light-yellow-header;
+                }
+
+                tr:hover {
+                    font-weight: 600;
+                }
+
+                & {
+                    font-family:'Aeonis LT W01 Thin Extd';
+                    border-bottom: 1px solid @color-dividers;
+                }
+
+
+                td {
+                    border-right: 1px solid @color-dividers;
+                    padding: 15px 20px;
+                }
+                td:last-child {
+                    text-align: right;
+                    border-right: none
+                }
+
+
+                td:nth-child(3), td:nth-child(2) {
+                    text-align: center;
+                }
+
+
+                td:nth-child(3) {
+                    text-decoration: line-through;
+                }
+
+                tr:first-child {
+                    td {
+                        padding-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: @breakpoint-mobile) {
+    .mod-textcontent{
+        .desktop-title {
+            display:none;
+        }
+        .mobile-title {
+            display:block;
+        }
+
+        table {
+
+            thead {
+                font-size:12px;
+                th:nth-child(3){
+                    display: none;
+                }
+            }
+
+            tbody {
+                font-size:12px;
+                td {
+                    padding: 15px 0px;
+                }
+                td:nth-child(3){
+                    display: none;
+                }
+                tr:nth-child(even) {
+                    background-color: #f2f2f2;
+                }
+
+                tr:hover {
+                    font-weight: normal;
+                    color:@color-mine-shaft;
+                }
+            }
+        }
+
+    }
+}

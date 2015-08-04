@@ -9,5 +9,7 @@ modules/
 search/
 temp/
 node_modules/
+.DS_Store
+templates/massaging/__MACOSX/
 
 

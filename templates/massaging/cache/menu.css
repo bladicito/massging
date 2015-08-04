@@ -1,0 +1,54 @@
+.mod-menu .container {
+  padding: 15px 0;
+}
+.mod-menu .main-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.mod-menu .main-nav:before,
+.mod-menu .main-nav:after {
+  content: " ";
+  display: table;
+}
+.mod-menu .main-nav:after {
+  clear: both;
+}
+.mod-menu .main-nav li {
+  float: left;
+  position: relative;
+}
+.mod-menu .main-nav li a {
+  padding: 10px 20px;
+  font-size: 20px;
+  display: block;
+  text-decoration: none;
+  color: #000000;
+  font-weight: 100;
+}
+.mod-menu .main-nav li a:hover {
+  color: #001100;
+}
+.mod-menu .main-nav li ul {
+  position: absolute;
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #404040;
+  z-index: 1000;
+}
+.mod-menu .main-nav li ul li a {
+  color: #ffffff;
+  display: block;
+}
+.mod-menu .main-nav li.menu-current a {
+  color: #000000;
+  font-weight: 300;
+}
+.mod-menu .main-nav li:hover ul {
+  display: block;
+}
+.mod-menu .main-nav li:hover ul li a {
+  color: #ffffff;
+}

@@ -1,0 +1,169 @@
+.mod-menu {
+    .container {
+        padding: 15px 0;
+    }
+    .main-nav {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+            float: left;
+            position: relative;
+            a {
+                padding: 10px 20px;
+                font-size: 20px;
+                display: block;
+                text-decoration: none;
+                color: #000000;
+                font-weight: 100;
+
+            }
+
+            a:hover {
+                color: #001100;
+            }
+
+            ul {
+                position: absolute;
+                display:none;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                background-color: #404040;
+                z-index: 1000;
+                li {
+
+                    a {
+                        color: #ffffff;
+                        display: block;
+                    }
+                }
+
+            }
+        }
+        li.menu-current {
+            & > a {
+                color: @color-plum1;
+                font-weight: 600;
+
+            }
+
+        }
+        li:hover {
+            ul {
+                display: block;
+                li {
+                    a {
+                        color:#ffffff;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .burger--container {
+        text-align: right;
+    }
+
+    .burger-menu {
+        background-color: @color-plum1;
+        width: 50px;
+        height: auto;
+        padding: 5px;
+        cursor: pointer;
+        display:none;
+        .radius(5px);
+        .burger--line {
+            height: 5px;
+            margin-bottom: 5px;
+            background-color: @color-white;
+        }
+        .burger--line:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media screen and (max-width: @breakpoint-mobile) {
+
+    .mod-menu {
+        .container {
+            ul {
+                li {
+                    float: none;
+                    a {
+                        border-bottom: 1px solid @color-dividers;
+                    }
+
+                    ul {
+                        display: block;
+                        position: relative;
+                        background-color: @color-white;
+                        li {
+                            a {
+                                color: @color-mine-shaft;
+                                border-bottom: 1px solid @color-dividers;
+                                padding-left:30px;
+                                font-size: 15px;
+                            }
+                        }
+
+                        li:hover {
+                            a {
+                                color: @color-mine-shaft;
+                            }
+
+                        }
+                    }
+                }
+
+                li:hover {
+                    a {
+                        color: @color-mine-shaft;
+                    }
+
+                    ul {
+                        li {
+                            a {
+                                color: @color-mine-shaft;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+
+        .main-nav {
+            & {
+                display: none;
+            }
+            & > .menu-last {
+                ul {
+                    li.menu-last{
+                        a {
+                            border-bottom: none;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .burger-menu {
+            display:block;
+        }
+
+        .container.showing-menu {
+            .burger-menu {
+                background-color: @color-dividers;
+            }
+            .main-nav {
+                display:block;
+            }
+        }
+
+
+    }
+}

@@ -1,0 +1,70 @@
+.global-massaging {
+    .full-width-gray {
+        border-bottom: 1px solid #cacaca;
+        background-color: #f2f2f2;
+        & > .container {
+            .container {
+                width: 100%;
+            }
+        }
+    }
+
+    .full-width-white {
+        border-bottom: 1px solid #cacaca;
+        background-color: #ffffff;
+        & > .container {
+            .container {
+                width: 100%;
+            }
+        }
+    }
+
+    .full-width-green {
+        background-color: #7A9464;
+        & > .container {
+            .container {
+                width: 100%;
+            }
+        }
+    }
+
+
+    .header {
+        margin-top: 30px;
+        padding-bottom: 15px;
+
+    }
+
+    .slider-dots--holder {
+        .slick-dots {
+            padding-top: 30px;
+            list-style: none;
+            li {
+                float: left;
+                .radius(50%);
+                width: 30px;
+                height:30px;
+                background-color: #FFE573;
+                margin-right: 15px;
+                button {
+                    border: none;
+                    background: transparent;
+                    color: #ffffff;
+                    position: relative;
+                    top: 4px;
+                    left:5px;
+                }
+            }
+            li.slick-active {
+                background-color: @color-plum2;
+                button {
+                    border: none;
+                    background: transparent;
+                    color: #ffffff;
+                }
+
+            }
+        }
+    }
+
+}
