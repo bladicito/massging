@@ -4,7 +4,14 @@
             <div class="col-md-12">
                 <div class="mod mod-textcontent">
                     <div class="container">
-                        <?php echo page_content(2);?>
+                        <?php
+                        $commentPage = strpos($_SERVER['PHP_SELF'], "comment.php");
+                            if ($commentPage == true) {
+                                page_content();
+                            } else {
+                                page_content(2);
+                            }
+                        ?>
                     </div>
                 </div>
             </div>

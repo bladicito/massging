@@ -5,7 +5,8 @@ framework/
 include/
 languages/
 form/
-modules/
+modules/*
+!modules/news
 search/
 temp/
 node_modules/

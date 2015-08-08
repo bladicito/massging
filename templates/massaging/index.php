@@ -10,11 +10,6 @@
         <meta name="keywords" content="<?php page_keywords(); ?>" />
         <link rel="stylesheet" href="<?php echo TEMPLATE_DIR;?>/css/styles.css">
         <link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/cd802a3f-e2cf-4b1c-8451-b5cfe02baafd.css"/>
-        <?php
-            if(function_exists('register_frontend_modfiles')) {
-                register_frontend_modfiles('css');
-            }
-        ?>
     </head>
     <body class="global-massaging">
     <div class="full-width-gray">
@@ -52,11 +47,6 @@
 
 
     <?php
-
-
-
-
-
 
     switch (PAGE_TITLE) {
         case 'Home' :
