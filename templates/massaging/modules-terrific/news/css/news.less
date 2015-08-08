@@ -1,4 +1,39 @@
 .mod-news {
+    .comments {
+        tbody {
+            .comment__header {
+                border-bottom: 1px solid @color-dividers;
+                .comment__header__cell{
+                    padding-top: 50px;
+
+                }
+                .comment__header__cell--title {
+                    font-size: 22px;
+                    color: @color-christi;
+                    font-weight: 600;
+                }
+                .comment__header__cell--extra {
+                    text-align: right;
+                    font-size: 12px;
+                    color:@color-plum1;
+                }
+
+            }
+            .comment__text {
+                border-bottom: 1px solid @color-plum1;
+                .comment__text__cell {
+                    text-align: left;
+
+                }
+                .comment__text__cell--content {
+                    padding: 35px 0;
+                }
+
+            }
+        }
+    }
+
+
 
     table {
         tr {
@@ -51,4 +86,5 @@
             }
         }
     }
+
 }
