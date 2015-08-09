@@ -1,0 +1,33 @@
+.mod-form {
+    &{
+        width: 50%;
+    }
+    .container {
+        label {
+            color: @color-plum1;
+        }
+        .mandatory-field {
+            color: @color-christi;
+            font-size: 17px;
+            font-weight: 600;
+        }
+        .frm-required {
+            font-size: 17px;
+            font-weight: 600;
+        }
+    }
+}
+
+@media screen and (max-width: @breakpoint-mobile) {
+
+    .mod-form  {
+        & {
+            width: 100%;
+        }
+        .btn {
+            margin-top: 24px;
+            margin-bottom: 24px;
+            width: 100%;
+        }
+    }
+}

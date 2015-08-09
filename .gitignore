@@ -4,7 +4,6 @@ admin/
 framework/
 include/
 languages/
-form/
 modules/*
 !modules/news
 !modules/form

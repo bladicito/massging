@@ -1,0 +1,45 @@
+.skin-news-form-add {
+    .comments__add__actions {
+        margin-bottom: 24px;
+
+    }
+    .comments__add__action__cell--cancel {
+        text-align: right;
+    }
+
+    .comments__add__action__cell {
+
+    }
+    .captcha-heading {
+        margin-top: 24px;
+        color: @color-plum1;
+    }
+
+    .control-label {
+        color: @color-plum1;
+    }
+}
+
+@media screen and (max-width: @breakpoint-mobile) {
+    .skin-news-form-add{
+        .btn {
+
+            width: 100%;
+        }
+
+        table.captcha_table {
+            tr, td {
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+            td:nth-child(3) {
+                display: block !important;
+            }
+
+            .captcha_expl {
+                text-align: center;
+            }
+        }
+    }
+}
