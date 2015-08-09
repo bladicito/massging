@@ -194,6 +194,36 @@
 }
 @breakpoint-mobile:768px;
 @breakpoint-tablet: 992px;
+.mod-logo {
+    .container {
+        margin-top: 35px;
+    }
+
+    img {
+        width: 100px;
+        height: auto;
+    }
+
+    h3 {
+        display: inline-block;
+        color: @color-christi;
+        margin-top: 20px;
+        left: 20px;
+        position: relative;
+        top: 43px;
+        font-weight: 600;
+    }
+
+}
+
+@media screen and (max-width: @breakpoint-mobile) {
+
+    .mod-logo {
+        .container {
+           text-align: center;
+        }
+    }
+}
 .mod-footer {
     .container {
         padding: 30px 0;
@@ -252,36 +282,6 @@
         }
     }
 
-}
-.mod-logo {
-    .container {
-        margin-top: 35px;
-    }
-
-    img {
-        width: 100px;
-        height: auto;
-    }
-
-    h3 {
-        display: inline-block;
-        color: @color-christi;
-        margin-top: 20px;
-        left: 20px;
-        position: relative;
-        top: 43px;
-        font-weight: 600;
-    }
-
-}
-
-@media screen and (max-width: @breakpoint-mobile) {
-
-    .mod-logo {
-        .container {
-           text-align: center;
-        }
-    }
 }
 .mod-menu {
     .container {
@@ -453,6 +453,10 @@
     }
 }
 .mod-news {
+    .comments__main__title {
+        margin-left: 20px;
+        margin-top: 48px;
+    }
     .comments {
         tbody {
             .comment__header {
@@ -639,7 +643,7 @@
 
     .back-to-overview {
         color: @color-christi;
-        font-size: 20px;
+        font-size: 15px;
     }
     .container {
         & > i {
