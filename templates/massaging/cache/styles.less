@@ -253,30 +253,6 @@
     }
 
 }
-.mod-form {
-    &{
-        width: 50%;
-    }
-    .container {
-        label {
-            color: @color-plum1;
-        }
-    }
-}
-
-@media screen and (max-width: @breakpoint-mobile) {
-
-    .mod-form  {
-        & {
-            width: 100%;
-        }
-        .btn {
-            margin-top: 24px;
-            margin-bottom: 24px;
-            width: 100%;
-        }
-    }
-}
 .mod-logo {
     .container {
         margin-top: 35px;
@@ -474,6 +450,40 @@
         }
 
 
+    }
+}
+.mod-form {
+    &{
+        width: 50%;
+    }
+    .container {
+        label {
+            color: @color-plum1;
+        }
+        .mandatory-field {
+            color: @color-christi;
+            font-size: 17px;
+            font-weight: 600;
+        }
+        .frm-required {
+            color: @color-christi;
+            font-size: 17px;
+            font-weight: 600;
+        }
+    }
+}
+
+@media screen and (max-width: @breakpoint-mobile) {
+
+    .mod-form  {
+        & {
+            width: 100%;
+        }
+        .btn {
+            margin-top: 24px;
+            margin-bottom: 24px;
+            width: 100%;
+        }
     }
 }
 .mod-news {
@@ -674,6 +684,16 @@
             font-size:20px;
             margin-right: 20px;
             color: @color-christi;
+        }
+    }
+
+    p {
+        .clearfix();
+        img {
+            float: right;
+            padding: 24px;
+            border: 1px solid @color-dividers;
+            .radius(8px)
         }
     }
 
