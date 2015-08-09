@@ -91,27 +91,6 @@
 .global-massaging table tbody {
   font-family: 'Aeonis LT W01 Thin Extd';
 }
-.mod-logo .container {
-  margin-top: 35px;
-}
-.mod-logo img {
-  width: 100px;
-  height: auto;
-}
-.mod-logo h3 {
-  display: inline-block;
-  color: #859a12;
-  margin-top: 20px;
-  left: 20px;
-  position: relative;
-  top: 43px;
-  font-weight: 600;
-}
-@media screen and (max-width: 768px) {
-  .mod-logo .container {
-    text-align: center;
-  }
-}
 .mod-footer .container {
   padding: 30px 0;
 }
@@ -155,6 +134,43 @@
     color: #000;
     position: relative;
     top: -10px;
+  }
+}
+.mod-form {
+  width: 50%;
+}
+.mod-form .container label {
+  color: #612166;
+}
+@media screen and (max-width: 768px) {
+  .mod-form {
+    width: 100%;
+  }
+  .mod-form .btn {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    width: 100%;
+  }
+}
+.mod-logo .container {
+  margin-top: 35px;
+}
+.mod-logo img {
+  width: 100px;
+  height: auto;
+}
+.mod-logo h3 {
+  display: inline-block;
+  color: #859a12;
+  margin-top: 20px;
+  left: 20px;
+  position: relative;
+  top: 43px;
+  font-weight: 600;
+}
+@media screen and (max-width: 768px) {
+  .mod-logo .container {
+    text-align: center;
   }
 }
 .mod-menu .container {

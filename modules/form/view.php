@@ -146,6 +146,8 @@ if($_POST == array()) {
    if($query_fields = $database->query($sql)) {
       if($query_fields->numRows() > 0) {
 ?>
+          <div class="mod mod-form">
+              <div class="container">
          <form <?php echo ( ( (strlen($form_name) > 0) AND (false == $use_xhtml_strict) ) ? "name=\"".$form_name."\"" : ""); ?> action="<?php echo htmlspecialchars(strip_tags($_SERVER['SCRIPT_NAME'])).'';?>" method="post">
             <input type="hidden" name="submission_id" value="<?php echo $_SESSION['form_submission_id']; ?>" />
             <?php
@@ -186,7 +188,7 @@ if($_POST == array()) {
             if (($field['type'] == "radio") || ($field['type'] == "checkbox")) {
                $field_title = $field['title'];
             } else {
-               $field_title = '<label for="field'.$field_id.'">'.$field['title'].'</label>'.PHP_EOL;
+               $field_title = '<label for="field'.$field_id.'" class="control-label">'.$field['title'].'</label>'.PHP_EOL;
             }
             $values = array($field_title);
             if ($field['required'] == 1) {
@@ -197,10 +199,10 @@ if($_POST == array()) {
             if($field['type'] == 'textfield') {
                $vars[] = '{FIELD}';
                $max_lenght_para = (intval($field['extra']) ? ' maxlength="'.intval($field['extra']).'"' : '');
-               $values[] = '<input type="text" name="field'.$field_id.'" id="field'.$field_id.'"'.$max_lenght_para.' value="'.(isset($_SESSION['field'.$field_id])?$_SESSION['field'.$field_id]:$value).'" class="frm-textfield" />'.PHP_EOL;
+               $values[] = '<input type="text" name="field'.$field_id.'" id="field'.$field_id.'"'.$max_lenght_para.' value="'.(isset($_SESSION['field'.$field_id])?$_SESSION['field'.$field_id]:$value).'" class="frm-textfield form-control" />'.PHP_EOL;
             } elseif($field['type'] == 'textarea') {
                $vars[] = '{FIELD}';
-               $values[] = '<textarea name="field'.$field_id.'" id="field'.$field_id.'" class="frm-textarea" cols="30" rows="8">'.(isset($_SESSION['field'.$field_id])?$_SESSION['field'.$field_id]:$value).'</textarea>'.PHP_EOL;
+               $values[] = '<textarea name="field'.$field_id.'" id="field'.$field_id.'" class="frm-textarea form-control" cols="30" rows="8">'.(isset($_SESSION['field'.$field_id])?$_SESSION['field'.$field_id]:$value).'</textarea>'.PHP_EOL;
             } elseif($field['type'] == 'select') {
                $vars[] = '{FIELD}';
                $options = explode(',', $value);
@@ -253,6 +255,8 @@ if($_POST == array()) {
 // Add form end code
 ?>
 </form>
+              </div>
+            </div>
 <?php
       }
    }
