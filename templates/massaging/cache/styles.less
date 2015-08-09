@@ -253,6 +253,81 @@
     }
 
 }
+.mod-form {
+    &{
+        width: 50%;
+    }
+    .container {
+        label {
+            color: @color-plum1;
+        }
+        .mandatory-field {
+            color: @color-christi;
+            font-size: 17px;
+            font-weight: 600;
+        }
+        .frm-required {
+            color: @color-christi;
+            font-size: 17px;
+            font-weight: 600;
+        }
+    }
+}
+
+@media screen and (max-width: @breakpoint-mobile) {
+
+    .mod-form  {
+        & {
+            width: 100%;
+        }
+        .btn {
+            margin-top: 24px;
+            margin-bottom: 24px;
+            width: 100%;
+        }
+    }
+}
+.skin-news-form-add {
+    .comments__add__actions {
+        margin-bottom: 24px;
+
+    }
+    .comments__add__action__cell--cancel {
+        text-align: right;
+    }
+
+    .comments__add__action__cell {
+
+    }
+    .captcha-heading {
+        margin-top: 24px;
+        color: @color-plum1;
+    }
+}
+
+@media screen and (max-width: @breakpoint-mobile) {
+    .skin-news-form-add{
+        .btn {
+
+            width: 100%;
+        }
+
+        table.captcha_table {
+            tr, td {
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+            td:nth-child(3) {
+                display: block !important;
+            }
+
+            .captcha_expl {
+                text-align: center;
+            }
+        }
+    }
+}
 .mod-logo {
     .container {
         margin-top: 35px;
@@ -450,40 +525,6 @@
         }
 
 
-    }
-}
-.mod-form {
-    &{
-        width: 50%;
-    }
-    .container {
-        label {
-            color: @color-plum1;
-        }
-        .mandatory-field {
-            color: @color-christi;
-            font-size: 17px;
-            font-weight: 600;
-        }
-        .frm-required {
-            color: @color-christi;
-            font-size: 17px;
-            font-weight: 600;
-        }
-    }
-}
-
-@media screen and (max-width: @breakpoint-mobile) {
-
-    .mod-form  {
-        & {
-            width: 100%;
-        }
-        .btn {
-            margin-top: 24px;
-            margin-bottom: 24px;
-            width: 100%;
-        }
     }
 }
 .mod-news {

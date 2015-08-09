@@ -65,7 +65,7 @@ else
 	$settings = $query_settings->fetchRow();
 
 	// Print comments page
-    echo '<div class="mod-news skin-news-form-add">';
+    echo '<div class="mod-form skin-news-form-add">';
 	$vars = array('[POST_TITLE]','[TEXT_COMMENT]');
 	$values = array(POST_TITLE, $MOD_NEWS['TEXT_COMMENT']);
 	echo str_replace($vars, $values, ($settings['comments_page']));
@@ -98,33 +98,62 @@ else
 	</p>
 	<?php }
 	// echo $admin->getFTAN();
-	echo $TEXT['TITLE']; ?>:
-	<br />
-	<input type="text" name="title" maxlength="255" style="width: 90%;"<?php if(isset($_SESSION['comment_title'])) { echo ' value="'.$_SESSION['comment_title'].'"'; unset($_SESSION['comment_title']); } ?> />
-	<br /><br />
-	<?php echo $TEXT['COMMENT']; 
-	?>:
-	<br />
-	<?php if(ENABLED_ASP) { ?>
-		<textarea name="comment_<?php echo date('W'); ?>" rows="10" cols="1" style="width: 90%; height: 150px;"><?php if(isset($_SESSION['comment_body'])) { echo $_SESSION['comment_body']; unset($_SESSION['comment_body']); } ?></textarea>
-	<?php } else { ?>
-		<textarea name="comment" rows="10" cols="1" style="width: 90%; height: 150px;"><?php if(isset($_SESSION['comment_body'])) { echo $_SESSION['comment_body']; unset($_SESSION['comment_body']); } ?></textarea>
-	<?php } ?>
-	<br /><br />
+
+
+    ?>
+
+	<div class="form-group">
+	    <label class="control-label">
+            <?php echo $TEXT['TITLE']; ?>:
+        </label>
+        <input  class       = "form-control"
+                type        = "text"
+                name        = "title"
+                maxlength   = "255"
+                <?php if(isset($_SESSION['comment_title'])) { echo ' value="'.$_SESSION['comment_title'].'"'; unset($_SESSION['comment_title']); } ?>
+            />
+    </div>
+
+    <div class="form-group">
+	    <label><?php echo $TEXT['COMMENT'];?>: </label>
+	    <?php if(ENABLED_ASP) { ?>
+            <textarea class="form-control" name="comment_<?php echo date('W'); ?>" rows="10" cols="1" ><?php if(isset($_SESSION['comment_body'])) { echo $_SESSION['comment_body']; unset($_SESSION['comment_body']); } ?></textarea>
+        <?php } else { ?>
+            <textarea class="form-control" name="comment" rows="10" cols="1" ><?php if(isset($_SESSION['comment_body'])) { echo $_SESSION['comment_body']; unset($_SESSION['comment_body']); } ?></textarea>
+        <?php } ?>
+    </div>
+
+
 	<?php
-	if(isset($_SESSION['captcha_error'])) {
-		echo '<font color="#FF0000">'.$_SESSION['captcha_error'].'</font><br />';
-		$_SESSION['captcha_retry_news'] = true;
-	}
+	if(isset($_SESSION['captcha_error'])) { ?>
+
+    <div class="row">
+        <div class="col-md-12">
+            <p>
+                <?php   echo  $_SESSION['captcha_error'];
+                        $_SESSION['captcha_retry_news'] = true;
+                ?>
+            </p>
+        </div>
+    </div>
+
+     <?php } ?>
+
+    <?php
 	// Captcha
 	if($settings['use_captcha']) {
 	?>
-	<table cellpadding="2" cellspacing="0" border="0">
-	<tr>
-		<td><?php echo $TEXT['VERIFICATION']; ?>:</td>
-		<td><?php call_captcha(); ?></td>
-	</tr>
-    </table>
+
+        <div class="row">
+            <div class="col-md-2">
+                <p class="captcha-heading"><?php echo $TEXT['VERIFICATION']; ?>:</p>
+            </div>
+            <div class="col-md-10">
+                <?php call_captcha(); ?>
+            </div>
+
+        </div>
+
 	<?php
 	if(isset($_SESSION['captcha_error'])) {
 		unset($_SESSION['captcha_error']);
@@ -133,17 +162,18 @@ else
 	<?php
 	}
 	?>
-	<table class="news-table">
-	<tr>
-	    <td>
-            <input type="submit" name="submit" value="<?php echo $MOD_NEWS['TEXT_ADD_COMMENT']; ?>" />
-        </td>
-        <td>
-		    <input type="button" value="<?php echo $TEXT['CANCEL']; ?>" onclick="history.go(-1)"  />
-        </td>
-	</tr>
-    </table>
+
+        <div class="row news-table comments__add__actions">
+            <div class="col-md-4 col-xs-12 comments__add__action__cell comments__add__action__cell--submit">
+                 <input type="submit" class="btn btn-default" name="submit" value="<?php echo $MOD_NEWS['TEXT_ADD_COMMENT']; ?>" />
+            </div>
+            <div class="col-md-4 col-xs-12">
+            </div>
+            <div class="col-md-4 col-xs-12 comments__add__action__cell comments__add__action__cell--cancel">
+                <input type="button" class="btn btn-danger" value="<?php echo $TEXT['CANCEL']; ?>" onclick="history.go(-1)"  />
+            </div>
+        </div>
 	</form>
-     </div>
-	<?php
-}
+</div>
+
+<?php }
