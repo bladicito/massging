@@ -1,0 +1,580 @@
+.global-massaging .full-width-gray {
+  border-bottom: 1px solid #cacaca;
+  background-color: #f2f2f2;
+}
+.global-massaging .full-width-gray > .container .container {
+  width: 100%;
+}
+.global-massaging .full-width-white {
+  border-bottom: 1px solid #cacaca;
+  background-color: #ffffff;
+}
+.global-massaging .full-width-white > .container .container {
+  width: 100%;
+}
+.global-massaging .full-width-green {
+  background-color: #7A9464;
+}
+.global-massaging .full-width-green > .container .container {
+  width: 100%;
+}
+.global-massaging .header {
+  margin-top: 30px;
+  padding-bottom: 15px;
+}
+.global-massaging .slider-dots--holder .slick-dots {
+  padding-top: 30px;
+  list-style: none;
+}
+.global-massaging .slider-dots--holder .slick-dots li {
+  float: left;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -ms-border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: #FFE573;
+  margin-right: 15px;
+}
+.global-massaging .slider-dots--holder .slick-dots li button {
+  border: none;
+  background: transparent;
+  color: #ffffff;
+  position: relative;
+  top: 4px;
+  left: 5px;
+}
+.global-massaging .slider-dots--holder .slick-dots li.slick-active {
+  background-color: #906494;
+}
+.global-massaging .slider-dots--holder .slick-dots li.slick-active button {
+  border: none;
+  background: transparent;
+  color: #ffffff;
+}
+.global-massaging h1 {
+  font-family: 'Aeonis LT W01 Medium Extd';
+  font-size: 20px;
+}
+.global-massaging h2 {
+  font-family: 'HelveticaNeueW01-UltLt';
+  font-size: 30px;
+  color: #906494;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  letter-spacing: 1.5px;
+}
+.global-massaging h3 {
+  font-family: 'HelveticaNeueW01-UltLt';
+  font-size: 20px;
+  color: #906494;
+  letter-spacing: 1.5px;
+}
+.global-massaging .main-nav {
+  font-family: 'Aeonis LT W01 Thin Extd';
+}
+.global-massaging p,
+.global-massaging ul {
+  font-family: 'HelveticaNeueW01-45Ligh';
+  letter-spacing: 1.5px;
+  line-height: 25px;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+.global-massaging .footer p {
+  font-family: 'Aeonis LT W01 Thin Extd';
+}
+.global-massaging table thead {
+  font-family: 'Aeonis LT W01 Bold Extended';
+}
+.global-massaging table tbody {
+  font-family: 'Aeonis LT W01 Thin Extd';
+}
+.mod-footer .container {
+  padding: 30px 0;
+}
+.mod-footer .container ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.mod-footer .container ul li {
+  position: relative;
+  max-width: 500px;
+  margin-bottom: 10px;
+  border-bottom: dashed 1px #612166;
+  padding-bottom: 10px;
+  color: #ffffff;
+}
+.mod-footer .container ul li p {
+  display: inline-block;
+  position: absolute;
+  top: 5px;
+  left: 50px;
+}
+.mod-footer .container ul li i {
+  color: #000;
+}
+@media screen and (max-width: 768px) {
+  .mod-footer .container ul li {
+    color: #ffffff;
+  }
+  .mod-footer .container ul li p {
+    text-align: right;
+    width: 70%;
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    font-size: 15px;
+    left: 50px ;
+    top: auto;
+  }
+  .mod-footer .container ul li i {
+    color: #000;
+    position: relative;
+    top: -10px;
+  }
+}
+.mod-form {
+  width: 50%;
+}
+.mod-form .container label {
+  color: #612166;
+}
+.mod-form .container .mandatory-field {
+  color: #859a12;
+  font-size: 17px;
+  font-weight: 600;
+}
+.mod-form .container .frm-required {
+  font-size: 17px;
+  font-weight: 600;
+}
+@media screen and (max-width: 768px) {
+  .mod-form {
+    width: 100%;
+  }
+  .mod-form .btn {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    width: 100%;
+  }
+}
+.skin-news-form-add .comments__add__actions {
+  margin-bottom: 24px;
+}
+.skin-news-form-add .comments__add__action__cell--cancel {
+  text-align: right;
+}
+.skin-news-form-add .captcha-heading {
+  margin-top: 24px;
+  color: #612166;
+}
+.skin-news-form-add .control-label {
+  color: #612166;
+}
+@media screen and (max-width: 768px) {
+  .skin-news-form-add .btn {
+    width: 100%;
+  }
+  .skin-news-form-add table.captcha_table tr,
+  .skin-news-form-add table.captcha_table td {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  .skin-news-form-add table.captcha_table td:nth-child(3) {
+    display: block !important;
+  }
+  .skin-news-form-add table.captcha_table .captcha_expl {
+    text-align: center;
+  }
+}
+.mod-logo .container {
+  margin-top: 35px;
+}
+.mod-logo img {
+  width: 80%;
+  height: auto;
+}
+.mod-logo h3 {
+  display: inline-block;
+  color: #859a12;
+  margin-top: 20px;
+  left: 20px;
+  position: relative;
+  top: 43px;
+  font-weight: 600;
+}
+@media screen and (max-width: 768px) {
+  .mod-logo .container {
+    text-align: center;
+  }
+}
+.mod-menu .container {
+  padding: 15px 0;
+}
+.mod-menu .main-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.mod-menu .main-nav li {
+  float: left;
+  position: relative;
+}
+.mod-menu .main-nav li a {
+  padding: 10px 20px;
+  font-size: 20px;
+  display: block;
+  text-decoration: none;
+  color: #000000;
+  font-weight: 100;
+}
+.mod-menu .main-nav li a:hover {
+  color: #001100;
+}
+.mod-menu .main-nav li ul {
+  position: absolute;
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #404040;
+  z-index: 1000;
+}
+.mod-menu .main-nav li ul li a {
+  color: #ffffff;
+  display: block;
+}
+.mod-menu .main-nav li.menu-current > a {
+  color: #612166;
+  font-weight: 600;
+}
+.mod-menu .main-nav li:hover ul {
+  display: block;
+}
+.mod-menu .main-nav li:hover ul li a {
+  color: #ffffff;
+}
+.mod-menu .burger--container {
+  text-align: right;
+}
+.mod-menu .burger-menu {
+  background-color: #612166;
+  width: 50px;
+  height: auto;
+  padding: 5px;
+  cursor: pointer;
+  display: none;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -ms-border-radius: 5px;
+}
+.mod-menu .burger-menu .burger--line {
+  height: 5px;
+  margin-bottom: 5px;
+  background-color: #ffffff;
+}
+.mod-menu .burger-menu .burger--line:last-child {
+  margin-bottom: 0;
+}
+@media screen and (max-width: 768px) {
+  .mod-menu .container ul li {
+    float: none;
+  }
+  .mod-menu .container ul li a {
+    border-bottom: 1px solid #e8e8e8;
+  }
+  .mod-menu .container ul li ul {
+    display: block;
+    position: relative;
+    background-color: #ffffff;
+  }
+  .mod-menu .container ul li ul li a {
+    color: #2e2e2e;
+    border-bottom: 1px solid #e8e8e8;
+    padding-left: 30px;
+    font-size: 15px;
+  }
+  .mod-menu .container ul li ul li:hover a {
+    color: #2e2e2e;
+  }
+  .mod-menu .container ul li:hover a {
+    color: #2e2e2e;
+  }
+  .mod-menu .container ul li:hover ul li a {
+    color: #2e2e2e;
+  }
+  .mod-menu .main-nav {
+    display: none;
+  }
+  .mod-menu .main-nav > .menu-last ul li.menu-last a {
+    border-bottom: none;
+  }
+  .mod-menu .burger-menu {
+    display: block;
+  }
+  .mod-menu .container.showing-menu .burger-menu {
+    background-color: #e8e8e8;
+  }
+  .mod-menu .container.showing-menu .main-nav {
+    display: block;
+  }
+}
+.mod-news .comments__main__title {
+  margin-left: 20px;
+  margin-top: 48px;
+}
+.mod-news .comments tbody .comment__header {
+  border-bottom: 1px solid #e8e8e8;
+}
+.mod-news .comments tbody .comment__header .comment__header__cell {
+  padding-top: 50px;
+}
+.mod-news .comments tbody .comment__header .comment__header__cell--title {
+  font-size: 22px;
+  color: #859a12;
+  font-weight: 600;
+}
+.mod-news .comments tbody .comment__header .comment__header__cell--extra {
+  text-align: right;
+  font-size: 12px;
+  color: #612166;
+}
+.mod-news .comments tbody .comment__text {
+  border-bottom: 1px solid #612166;
+}
+.mod-news .comments tbody .comment__text .comment__text__cell {
+  text-align: left;
+}
+.mod-news .comments tbody .comment__text .comment__text__cell--content {
+  padding: 35px 0;
+}
+.mod-news table tr {
+  background-color: transparent !important;
+}
+.mod-news table tr td {
+  border: none!important;
+}
+.mod-news table tr:hover {
+  font-weight: normal !important;
+}
+.mod-news .post-top {
+  border-bottom: 1px solid #906494;
+  color: #612166;
+}
+.mod-news .post-top a {
+  color: #612166;
+}
+.mod-news .post-top .post-title {
+  font-size: 19px;
+  font-weight: 600;
+}
+.mod-news .post-top .post-date {
+  text-align: right;
+  font-size: 14px;
+}
+.mod-news tr .post-short {
+  background-color: transparent;
+}
+.mod-news tr .post-short span {
+  color: #612166;
+  font-size: 20px;
+}
+.mod-news tr .post-short span a {
+  color: #612166;
+}
+.mod-news tr .post-short p {
+  text-align: left;
+}
+.mod-sliderhuge .container {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.mod-sliderhuge img {
+  width: 100%;
+  height: auto;
+}
+.mod-slogan {
+  padding-top: 50px;
+}
+.mod-slogan h1 {
+  text-align: right;
+  text-transform: uppercase;
+}
+.mod-slogan h3 {
+  text-align: right;
+}
+@media screen and (max-width: 768px) {
+  .mod-slogan h1,
+  .mod-slogan h3 {
+    text-align: center;
+  }
+}
+.mod-teaser .teaser__content:hover {
+  background-color: #fff5cf;
+}
+.mod-teaser .teaser__content {
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -ms-border-radius: 8px;
+  border: 1px solid #e8e8e8;
+  overflow: hidden;
+}
+.mod-teaser .teaser__content--text {
+  padding: 15px;
+}
+.mod-teaser .teaser__content--text p {
+  margin-bottom: 0;
+}
+.mod-teaser img {
+  width: 100%;
+}
+.mod-teaser .teaser__content--link {
+  padding: 15px;
+  text-align: right;
+}
+.mod-teaser .teaser__content--link a {
+  color: #859a12;
+}
+.mod-teaser .teaser__content--link i {
+  color: #859a12;
+  font-size: 2.5em;
+}
+.mod-teaser .teaser__content--link span {
+  margin-left: 20px;
+  font-weight: 400;
+  font-family: 'Aeonis LT W01 Thin Extd';
+}
+@media screen and (max-width: 768px) {
+  .mod-teaser .container {
+    margin-bottom: 24px;
+  }
+}
+.teasers {
+  padding: 24px 0;
+}
+.mod-textcontent .mobile-title {
+  display: none;
+}
+.mod-textcontent .desktop-title {
+  display: block;
+}
+.mod-textcontent .back-to-overview {
+  color: #859a12;
+  font-size: 15px;
+}
+.mod-textcontent .container > i {
+  font-size: 20px;
+  margin-right: 20px;
+  color: #859a12;
+}
+.mod-textcontent p:before,
+.mod-textcontent p:after {
+  content: " ";
+  display: table;
+}
+.mod-textcontent p:after {
+  clear: both;
+}
+.mod-textcontent p img {
+  float: right;
+  padding: 24px;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -ms-border-radius: 8px;
+}
+.mod-textcontent table {
+  width: 100%;
+  margin: 24px 0;
+}
+.mod-textcontent table thead {
+  font-family: 'Aeonis LT W01 Bold Extended';
+  border-bottom: 1px solid #e8e8e8;
+  margin-bottom: 20px;
+}
+.mod-textcontent table thead th {
+  padding-bottom: 10px;
+}
+.mod-textcontent table thead th:last-child {
+  text-align: right;
+}
+.mod-textcontent table thead th:nth-child(3),
+.mod-textcontent table thead th:nth-child(2) {
+  text-align: center;
+}
+.mod-textcontent table thead th:first-child {
+  width: 40%;
+}
+.mod-textcontent table tbody {
+  font-family: 'Aeonis LT W01 Thin Extd';
+  border-bottom: 1px solid #e8e8e8;
+}
+.mod-textcontent table tbody tr:nth-child(even) {
+  background-color: #fff5cf;
+}
+.mod-textcontent table tbody tr:hover {
+  font-weight: 600;
+}
+.mod-textcontent table tbody td {
+  border-right: 1px solid #e8e8e8;
+  padding: 15px 20px;
+}
+.mod-textcontent table tbody td:last-child {
+  text-align: right;
+  border-right: none;
+}
+.mod-textcontent table tbody td:nth-child(3),
+.mod-textcontent table tbody td:nth-child(2) {
+  text-align: center;
+}
+.mod-textcontent table tbody td:nth-child(3) {
+  text-decoration: line-through;
+}
+.mod-textcontent table tbody tr:first-child td {
+  padding-top: 10px;
+}
+.mod-textcontent > .mod.mod-news {
+  padding-bottom: 30px;
+}
+@media screen and (max-width: 768px) {
+  .mod-textcontent .desktop-title {
+    display: none;
+  }
+  .mod-textcontent .mobile-title {
+    display: block;
+  }
+  .mod-textcontent p img {
+    float: none;
+    margin-bottom: 24px;
+  }
+  .mod-textcontent table thead {
+    font-size: 12px;
+  }
+  .mod-textcontent table thead th:nth-child(3) {
+    display: none;
+  }
+  .mod-textcontent table tbody {
+    font-size: 12px;
+  }
+  .mod-textcontent table tbody td {
+    padding: 15px 0px;
+  }
+  .mod-textcontent table tbody td:nth-child(3) {
+    display: none;
+  }
+  .mod-textcontent table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  .mod-textcontent table tbody tr:hover {
+    font-weight: normal;
+    color: #2e2e2e;
+  }
+}
