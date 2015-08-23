@@ -497,9 +497,11 @@ if (!isset($post_id) || !is_numeric($post_id)) {
                 'USER_ID',
                 'USERNAME',
                 'DISPLAY_NAME',
-                'EMAIL'
+                'EMAIL',
+                'COMMENTEDBYNAME',
+                'COMMENTEDBYLASTNAME'
             );
-            $sql = 'SELECT `title`, `comment`, `commented_when`, `commented_by` '
+            $sql = 'SELECT `title`, `comment`, `commented_when`, `commented_by`, `commentedByName`, `commentedByLastName` '
                  . 'FROM `'.TABLE_PREFIX.'mod_news_comments` '
                  . 'WHERE `post_id`='.$post_id.' '
                  . 'ORDER BY `commented_when` ASC';
@@ -507,8 +509,11 @@ if (!isset($post_id) || !is_numeric($post_id)) {
                 while (($comment = $query_comments->fetchRow())) {
                     $iNumberOfComments++;
                     // Display Comments without slashes, but with new-line characters
-                    $comment['comment'] = nl2br($wb->strip_slashes($comment['comment']));
-                    $comment['title'] = $wb->strip_slashes($comment['title']);
+                    $comment['comment']               = nl2br($wb->strip_slashes($comment['comment']));
+                    $comment['title']                 = $wb->strip_slashes($comment['title']);
+                    $comment['commentedByName']       = $wb->strip_slashes($comment['commentedByName']);
+                    $comment['commentedByLastName']   = $wb->strip_slashes($comment['commentedByLastName']);
+
                     // Print comments loop
                     $commented_date = date(DATE_FORMAT, $comment['commented_when']+TIMEZONE);
                     $commented_time = date(TIME_FORMAT, $comment['commented_when']+TIMEZONE);
@@ -527,10 +532,15 @@ if (!isset($post_id) || !is_numeric($post_id)) {
                         $aReplacements[] = $users[$uid]['username'];
                         $aReplacements[] = $users[$uid]['display_name'];
                         $aReplacements[] = $users[$uid]['email'];
+                        $aReplacements[] = $comment['commentedByName'];
+                        $aReplacements[] = $comment['commentedByLastName'];
                     } else {
                         $aReplacements[] = '0';
-                        $aReplacements[] = strtolower($TEXT['UNKNOWN']);
-                        $aReplacements[] = $TEXT['UNKNOWN'];
+                        $aReplacements[] = ' ';
+                        $aReplacements[] = ' ';
+                        $aReplacements[] = ' ';
+                        $aReplacements[] = $comment['commentedByName'];
+                        $aReplacements[] = $comment['commentedByLastName'];
                     }
                     print (preg_replace($aPlaceHolders, $aReplacements, $setting_comments_loop));
                 }

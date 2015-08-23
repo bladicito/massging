@@ -102,6 +102,30 @@ else
 
     ?>
 
+    <div class="form-group">
+	    <label class="control-label">
+            <?php echo $TEXT['NAME_FORM']; ?>:
+        </label>
+        <input  class       = "form-control"
+                type        = "text"
+                name        = "firstname"
+                maxlength   = "255"
+                <?php if(isset($_SESSION['name_form'])) { echo ' value="'.$_SESSION['name_form'].'"'; unset($_SESSION['name_form']); } ?>
+            />
+    </div>
+
+     <div class="form-group">
+	    <label class="control-label">
+            <?php echo $TEXT['LAST_NAME_FORM']; ?>:
+        </label>
+        <input  class       = "form-control"
+                type        = "text"
+                name        = "lastname"
+                maxlength   = "255"
+                <?php if(isset($_SESSION['last_name_form'])) { echo ' value="'.$_SESSION['last_name_form'].'"'; unset($_SESSION['last_name_form']); } ?>
+            />
+    </div>
+
 	<div class="form-group">
 	    <label class="control-label">
             <?php echo $TEXT['TITLE']; ?>:

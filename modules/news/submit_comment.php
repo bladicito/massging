@@ -62,11 +62,17 @@ if(isset($_GET['page_id']) AND is_numeric($_GET['page_id'])
         $comment = $_POST['comment'];
 	}
 
-	$comment = $wb->add_slashes(strip_tags($comment));
-	$title = $wb->add_slashes(strip_tags($_POST['title']));
+    $firstname  = $wb->add_slashes(strip_tags($_POST['firstname']));
+    $lastname   = $wb->add_slashes(strip_tags($_POST['lastname']));
+	$comment    = $wb->add_slashes(strip_tags($comment));
+	$title      = $wb->add_slashes(strip_tags($_POST['title']));
+
+
 	// do not allow droplets in user input!
-	$title = str_replace(array("[[", "]]"), array("&#91;&#91;", "&#93;&#93;"), $title);
-	$comment = str_replace(array("[[", "]]"), array("&#91;&#91;", "&#93;&#93;"), $comment);
+	$title      = str_replace(array("[[", "]]"), array("&#91;&#91;", "&#93;&#93;"), $title);
+	$comment    = str_replace(array("[[", "]]"), array("&#91;&#91;", "&#93;&#93;"), $comment);
+    $firstname  = str_replace(array("[[", "]]"), array("&#91;&#91;", "&#93;&#93;"), $firstname);
+    $lastname   = str_replace(array("[[", "]]"), array("&#91;&#91;", "&#93;&#93;"), $lastname);
 
 	$page_id = (int)$_GET['page_id'];
 	$section_id = (int)$_GET['section_id'];
@@ -148,18 +154,28 @@ if(isset($_GET['page_id']) AND is_numeric($_GET['page_id'])
 	if($wb->is_authenticated() == true)
     {
 		$commented_by = $wb->get_user_id();
+        $query = $database->query("INSERT INTO ".TABLE_PREFIX."mod_news_comments (section_id,page_id,post_id,title,comment,commented_when,commented_by, commentedByName, commentedByLastName) VALUES ('$section_id','$page_id','$post_id','$title','$comment','$commented_when','$commented_by','$firstname','$lastname')");
+        // Get page link
+        $query_page = $database->query("SELECT link FROM ".TABLE_PREFIX."mod_news_posts WHERE post_id = '$post_id'");
+        $page = $query_page->fetchRow();
+        header('Location: '.$wb->page_link($page['link']).'?post_id='.$post_id.'' );
+        exit( 0 );
+
+
+
 	}
     else
     {
 		$commented_by = '';
+
+        $query = $database->query("INSERT INTO ".TABLE_PREFIX."mod_news_comments (section_id,page_id,post_id,title,comment,commented_when,commented_by, commentedByName, commentedByLastName) VALUES ('$section_id','$page_id','$post_id','$title','$comment','$commented_when','$commented_by','$firstname','$lastname')");
+        // Get page link
+        $query_page = $database->query("SELECT link FROM ".TABLE_PREFIX."mod_news_posts WHERE post_id = '$post_id'");
+        $page = $query_page->fetchRow();
+        header('Location: '.$wb->page_link($page['link']).'?post_id='.$post_id.'' );
+        exit( 0 );
 	}
 
-	$query = $database->query("INSERT INTO ".TABLE_PREFIX."mod_news_comments (section_id,page_id,post_id,title,comment,commented_when,commented_by) VALUES ('$section_id','$page_id','$post_id','$title','$comment','$commented_when','$commented_by')");
-	// Get page link
-	$query_page = $database->query("SELECT link FROM ".TABLE_PREFIX."mod_news_posts WHERE post_id = '$post_id'");
-	$page = $query_page->fetchRow();
-	header('Location: '.$wb->page_link($page['link']).'?post_id='.$post_id.'' );
-	exit( 0 );
 }
 else
 {

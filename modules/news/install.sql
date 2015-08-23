@@ -19,6 +19,8 @@ CREATE TABLE IF NOT EXISTS `{TABLE_PREFIX}mod_news_comments` (
   `post_id` int(11) NOT NULL DEFAULT '0',
   `title` varchar(255){TABLE_COLLATION} NOT NULL,
   `comment` text{TABLE_COLLATION} NOT NULL,
+  `commentedByName` varchar(255) NOT NULL,
+  `commentedByLastName` varchar(255) NOT NULL,
   `commented_when` int(11) NOT NULL DEFAULT '0',
   `commented_by` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`comment_id`)
