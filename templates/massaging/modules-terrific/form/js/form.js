@@ -76,9 +76,16 @@
             });
 
 
-            if (errors.length > 1) {
+            if (errors.length > 0) {
                 $(errors).each(function(index, item) {
                     item.wrapper.addClass('has-error');
+                });
+
+                swal({
+                    title: "Fehler im Formular",
+                    text: "Bitte überprüfen Sie, dass alle die obligatorische Felder korrekt ausgefüllt sind.",
+                    type: "error",
+                    confirmButtonText: "Verstanden"
                 });
 
                 return this;

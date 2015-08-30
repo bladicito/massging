@@ -18,6 +18,7 @@ var gulp            = require('gulp'),
 		'templates/massaging/assets/js/jquery.js',
 		'templates/massaging/assets/js/terrific.js',
 		'templates/massaging/assets/js/slick.js',
+		'templates/massaging/assets/js/sweetalert.js',
 		'templates/massaging/modules-terrific/**/js/*.js'
 	],
 
